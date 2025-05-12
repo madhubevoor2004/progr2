@@ -5,11 +5,11 @@ import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Date;
 
-public class StudentCourse {
+public class Student {
     private String name;
     private Date dob;
 
-    public StudentCourse(String name, String dobStr) throws ParseException {
+    public Student(String name, String dobStr) throws ParseException {
         this.name = name;
         this.dob = parseDate(dobStr);
     }
@@ -40,7 +40,7 @@ public class StudentCourse {
 
     public static void main(String[] args) {
         try {
-            StudentCourse s = new StudentCourse("John Doe", "2000-04-15");
+            Student s = new Student("John Doe", "2000-04-15");
             s.displayInfo();
         } catch (ParseException e) {
             System.out.println("Date parsing error: " + e.getMessage());
